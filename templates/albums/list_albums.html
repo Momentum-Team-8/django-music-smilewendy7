@@ -10,10 +10,10 @@
     {% for album in albums %}
         <div class="card">
             {% if album.title %}
-                <p>{{album.title}}</p>
+                <p><a href="{% url 'show_album' pk=album.pk %}">{{album.title}}</a></p>
                 <p>{{album.artist}}</p>
                 <img src={{album.cover_art}} alt="#">
-                <p>{{album.created_at}}</p>
+                <!-- <p>{{album.created_at}}</p> -->
 
             {% endif %}
 

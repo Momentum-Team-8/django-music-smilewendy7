@@ -28,6 +28,10 @@ urlpatterns = [
     path('albums/<int:pk>/delete/',
          albums_views.delete_album,
          name='delete_album'),
+    ### path for details 
+    path('albums/<int:pk>/details/',
+         albums_views.show_album,
+         name = 'show_album'),
     
 ]
 
