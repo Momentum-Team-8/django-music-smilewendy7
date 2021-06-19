@@ -3,16 +3,24 @@
 {% block content %}
 <!-- this is where we rend album -->
 <h1>All Albums</h1>
-{% endblock %}
+
+<p><a href="{% url 'add_album' %}">Add New Album</a></p>
 
 <div>
-    {% for album in albums%}
-    <div class = "card">
-    
+    {% for album in albums %}
+        <div class="card">
+            {% if album.title %}
+                <p>{{album.title}}</p>
+                <p>{{album.artist}}</p>
+                <p>{{album.cover_art}}</p>
+            {% endif %}
 
-    </div>
-    {% endfor%}
-
+            <p>
+                <a href="{% url 'edit_album' pk=album.pk %}">Edit Album</a><br>    
+                <a class="red" href="{% url 'delete_album' pk=album.pk %}">Delete Album</a>
+            </p>
+        </div>
+    {% endfor %}
 </div>
-
+{% endblock %}
 
