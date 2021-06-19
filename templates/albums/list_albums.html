@@ -12,7 +12,9 @@
             {% if album.title %}
                 <p>{{album.title}}</p>
                 <p>{{album.artist}}</p>
-                <p>{{album.cover_art}}</p>
+                <img src={{album.cover_art}} alt="#">
+                <p>{{album.created_at}}</p>
+
             {% endif %}
 
             <p>
