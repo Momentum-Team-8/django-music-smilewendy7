@@ -4,6 +4,7 @@
 <!-- this is where we rend album -->
 <h1>All Albums</h1>
 
+<!-- <p><a href="{% url 'list_artists' %}">All Artist</a></p> -->
 <p><a href="{% url 'add_album' %}">Add New Album</a></p>
 
 <div>
@@ -16,7 +17,6 @@
                 <!-- <p>{{album.created_at}}</p> -->
 
             {% endif %}
-
             <p>
                 <a href="{% url 'edit_album' pk=album.pk %}">Edit Album</a><br>    
                 <a class="red" href="{% url 'delete_album' pk=album.pk %}">Delete Album</a>

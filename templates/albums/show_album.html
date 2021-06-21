@@ -6,16 +6,16 @@
 
 <div>
         <div class="card">
-            <!-- {% if album.title %} -->
-            <p>{{album.title}}</p>
-            <p>{{album.artist}}</p>
-            <img src={{album.cover_art}} alt="#">
-            <p>{{album.created_at}}</p>
-            <!-- {% endif %} -->
-            <!-- <p>
+                {% if album.title %}
+                <p>{{album.title}}</p>
+                <p>{{album.artist}}</p>
+                <img src={{album.cover_art}} alt="#">
+                <p>{{album.created_at}}</p> -->
+            {% endif %}
+            <p>
                 <a href="{% url 'edit_album' pk=album.pk %}">Edit Album</a><br>    
                 <a class="red" href="{% url 'delete_album' pk=album.pk %}">Delete Album</a>
-            </p> -->
+            </p>
         </div>
 </div>
 {% endblock %}
